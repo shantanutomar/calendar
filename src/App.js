@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import Calendar from "./Components/Calendar";
+import { makeStyles } from '@material-ui/styles';
 
-function App() {
+const useStyles = makeStyles(theme => ({
+  header: {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    padding: '34px 0',
+    backgroundColor: theme.primaryColor,
+    color: theme.textColorPrimary,
+    textAlign: 'center',
+    fontSize: '36px',
+    fontWeight: '600',
+    textTransform: 'uppercase'
+  },
+  calendarIcon: {
+    fontSize: '38px',
+    marginRight: '15px',  
+  }
+}));
+
+
+const App = (props) => {
+  const classes = useStyles(props);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header className={classes.header}>
+        <div className={`${classes.calendarIcon} material-icons`}>today</div>
+        Calendar
       </header>
-    </div>
+      <Calendar />
+    </>
   );
 }
 

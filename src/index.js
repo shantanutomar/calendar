@@ -3,10 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { ThemeProvider } from '@material-ui/styles';
+
+const theme = {
+  primaryColor: '#49d798',
+  textColorPrimary: '#00202A',
+  textColorDisabled: '#ccc',
+  errorText: '#ff3300'
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
