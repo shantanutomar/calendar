@@ -3,12 +3,13 @@ import { makeStyles } from '@material-ui/styles';
 import { getMonth, getDate, getYear, isValid } from "date-fns";
 import Header from "./Header";
 import Days from "./Days";
+import Dates from "./Dates";
 import { useQueryStringState, getCurrentDate } from "../Utils/utils";
 
 const useStyles = makeStyles(theme => ({
   calendar: {
     border: '1px solid #eee',
-    margin: '200px auto 0',
+    margin: '5% auto 0;',
     display: 'block',
     position: 'relative',
     width: '700px',
@@ -40,6 +41,10 @@ const Calendar = props => {
       setYear(getYear(new Date()));
     }
   }, [setMonth, setDate, setYear])
+
+  const onDateClick = day => {
+    setDate(getDate(day));
+  };
 
   const onNextMonthClick = () => {
     setDate(1);
@@ -78,6 +83,7 @@ const Calendar = props => {
     <main className={classes.calendar}>
       <Header onPrevMonthClick={onPrevMonthClick} onNextMonthClick={onNextMonthClick} month={month} year={year} currentDate={getCurrentDate(date, month, year)} onMonthChange={onMonthChange} onYearChange={onYearChange} />
       <Days currentDate={getCurrentDate(date, month, year)} />
+      <Dates currentDate={getCurrentDate(date, month, year)} onDateClick={onDateClick} />
     </main> : <div className={classes.inValidDate}>You have selected an Invalid Date !!</div>
   );
 }
