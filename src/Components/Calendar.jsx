@@ -9,10 +9,10 @@ import { useQueryStringState, getCurrentDate } from "../Utils/utils";
 const useStyles = makeStyles(theme => ({
   calendar: {
     border: '1px solid #eee',
-    margin: '5% auto 0;',
+    margin: '30px auto 0;',
     display: 'block',
     position: 'relative',
-    width: '700px',
+    maxWidth: '600px',
     background: '#fff',
     borderRadius: '10px',
     boxShadow: '0 4px 8px 0 rgba(0,0,0,0.3)'

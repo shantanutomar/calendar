@@ -19,9 +19,9 @@ const useStyles = makeStyles(theme => ({
   select: {
     padding: '2px',
     fontWeight: '600',
-    fontSize: '24px',
+    fontSize: '20px',
     cursor: 'pointer',
-    width: '200px',
+    width: '160px',
     margin: '0 5px',
     outline: 'none',
     backgroundColor: theme.primaryColor,
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     border: 'none'
   },
   year: {
-    width: '120px'
+    width: '82px'
   },
   arrow: {
     height: '24px',

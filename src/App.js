@@ -7,16 +7,16 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
-    padding: '34px 0',
+    padding: '25px 0',
     backgroundColor: theme.primaryColor,
     color: theme.textColorPrimary,
     textAlign: 'center',
-    fontSize: '36px',
+    fontSize: '28px',
     fontWeight: '600',
     textTransform: 'uppercase'
   },
   calendarIcon: {
-    fontSize: '38px',
+    fontSize: '32px',
     marginRight: '15px',  
   }
 }));

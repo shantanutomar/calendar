@@ -9,16 +9,16 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    width: '100%',  
     fontWeight: '500',
   },
   day: {
     flexGrow: '1',
+    flexBasis: '0',
     justifyContent: 'center',
     textAlign: 'center',
     textTransform: 'uppercase',
     fontWeight: 600,
-    fontSize: '20px',
+    fontSize: '18px',
   },
 }));
 

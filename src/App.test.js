@@ -1,9 +1,34 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import Calendar from "./Components/Calendar";
+import Dates from "./Components/Dates";
+import Days from "./Components/Days";
+import Header from "./Components/Header";
+import renderer from 'react-test-renderer';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+it('Calendar Snapshot generated correctly', () => {
+  const tree = renderer
+    .create(<Calendar />)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it('Dates Snapshot generated correctly', () => {
+  const tree = renderer
+    .create(<Dates />)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it('Days Snapshot generated correctly', () => {
+  const tree = renderer
+    .create(<Days currentDate={new Date()}/>)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it('Header Snapshot generated correctly', () => {
+  const tree = renderer
+    .create(<Header />)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
 });

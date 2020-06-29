@@ -10,9 +10,9 @@ const useStyles = makeStyles(theme => ({
     padding: '20px'
   },
   dateCell: {
-    padding: '20px',
+    padding: '15px',
     textAlign: 'center',
-    fontSize: '18px',
+    fontSize: '16px',
     fontWeight: '600',
     borderRadius: '5px',
     flexGrow: '1',
